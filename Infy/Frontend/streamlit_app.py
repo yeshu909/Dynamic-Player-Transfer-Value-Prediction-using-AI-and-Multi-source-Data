@@ -21,7 +21,7 @@ try:
     if os.path.exists(model_path):
         model = pickle.load(open(model_path, "rb"))
     else:
-        # st.sidebar.warning("")
+        st.sidebar.warning("")
 except Exception as e:
     st.sidebar.error(f"Error loading model: {e}")
     model = None
@@ -377,5 +377,6 @@ elif selected == "⚙️ Settings":
                            "linear-gradient(135deg, #667eea, #764ba2)", 1300, True)
 
     st.success("✅ Settings applied in real-time!")
+
 
 
